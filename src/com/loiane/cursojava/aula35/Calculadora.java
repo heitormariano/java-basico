@@ -1,0 +1,25 @@
+package com.loiane.cursojava.aula35;
+
+public class Calculadora {
+
+	public static int fatorialNaoRecursivo(int num) {
+		if (num == 0) {
+			return 1;
+		}
+
+		int faltorial = 1;
+		for (int i = num; i > 0; i--) {
+			faltorial *= i;
+		}
+
+		return faltorial;
+	}
+	
+	public static int fatorial(int num) {
+		if (num == 0) {
+			return 1;
+		}
+
+		return num * fatorial(num - 1);
+	}
+}
