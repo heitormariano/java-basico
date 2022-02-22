@@ -1,7 +1,7 @@
 package com.loiane.cursojava.praticas;
 
 import java.math.BigDecimal;
-import java.text.DecimalFormat;
+import java.math.RoundingMode;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -9,13 +9,13 @@ import java.util.Random;
 public class Praticas {
 
 	public static void main(String[] args) {
-		
+
 		// exemploBreak();
 		// exemploReturn();
 		// exArrays();
 		// exMatrizes();
-		// exMetodosArrays();
-		exMatrizRandom();
+		exMetodosArrays();
+		// exMatrizRandom();
 	}
 
 	public static void exemploBreak() {
@@ -87,25 +87,25 @@ public class Praticas {
 		System.out.println("Primeira nota do aluno 1: " + notasAlunos[0][0]);
 
 		// percorrendo elementos da Matriz
-		for (int i = 0; i < notasAlunos.length; i++) {
-			System.out.println("Notas do aluno " + (i + 1) + " : ");
+		int i, j;
+		for (i = 0; i < notasAlunos.length; i++) {
+			System.out.println("Notas do aluno " + (i + 1) + ": ");
 			System.out.print("[");
-			for (int j = 0; j < notasAlunos[i].length; j++) {
-				if (j != notasAlunos[i].length - 1) {
-					System.out.print(notasAlunos[i][j] + ", ");
-				} else {
-					System.out.print(notasAlunos[i][j]);
-				}
+			for (j = 0; j < notasAlunos[i].length - 1; j++) {
+				System.out.print(notasAlunos[i][j] + ", ");
 			}
+			// inclusao de ultima nota (sem virgula no final)
+			System.out.print(notasAlunos[i][j]);
 			System.out.print("]");
+
 			System.out.println();
 		}
 
 		// calcular a média de cada aluno
 		double soma;
-		for (int i = 0; i < notasAlunos.length; i++) {
+		for (i = 0; i < notasAlunos.length; i++) {
 			soma = 0;
-			for (int j = 0; j < notasAlunos[i].length; j++) {
+			for (j = 0; j < notasAlunos[i].length; j++) {
 				soma += notasAlunos[i][j];
 			}
 			System.out.println("A média do aluno " + (i + 1) + ": " + (soma / notasAlunos[i].length));
@@ -128,7 +128,7 @@ public class Praticas {
 			System.out.println();
 		}
 	}
-	
+
 	public static void exMetodosArrays() {
 		List<String> palavras = Arrays.asList("Eu", "Vou", "Passar", "No", "CEFET");
 		for (int i = 0; i < palavras.size(); i++) {
@@ -149,7 +149,8 @@ public class Praticas {
 		Random random = new Random();
 		for (int i = 0; i < matriz.length; i++) {
 			for (int j = 0; j < matriz[i].length; j++) {
-				matriz[i][j] = new BigDecimal(random.nextDouble() * 10).setScale(2, BigDecimal.ROUND_DOWN).doubleValue();
+				matriz[i][j] = new BigDecimal(random.nextDouble() * 10).setScale(2, RoundingMode.HALF_DOWN)
+						.doubleValue();
 			}
 		}
 
