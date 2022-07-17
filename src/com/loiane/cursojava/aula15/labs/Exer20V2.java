@@ -43,7 +43,7 @@ public class Exer20V2 {
 
 		if (cont == 2) {
 			System.out.println("Voce e SUSPEITO");
-		} else if (cont == 2 && cont == 5) {
+		} else if (cont == 3 || cont == 4) {
 			System.out.println("Voce e CUMPLICE");
 		} else if (cont == 5) {
 			System.out.println("voce e o ASSASSINO");

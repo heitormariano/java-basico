@@ -29,7 +29,7 @@ public class Exer23 {
 
 		if (opcaoCarne == 1 || opcaoCarne == 2 || opcaoCarne == 3) {
 			if (opcaoCarne == 1) {
-				tipoCarne = "Fiile Duplo";
+				tipoCarne = "File Duplo";
 			} else if (opcaoCarne == 2) {
 				tipoCarne = "Alcatra";
 			} else if (opcaoCarne == 3) {
