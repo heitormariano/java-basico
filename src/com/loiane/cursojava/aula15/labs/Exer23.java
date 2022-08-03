@@ -93,9 +93,6 @@ public class Exer23 {
 			System.out.println("Tipo de Pagamento : " + tipoPagamento);
 			System.out.println("Desconto obtido: R$ " + valorDesconto);
 			System.out.println("Valor final da compra: R$ " + valorFinalCompra);
-			// System.out.printf("%.2f", valorDesconto); //uso de printf
-			// (impressao seguindo um formato)
-			// System.out.println();
 
 		} else {
 			System.out.println("Opcao invalida");
