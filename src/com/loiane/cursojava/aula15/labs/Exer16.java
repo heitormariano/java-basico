@@ -11,7 +11,7 @@ public class Exer16{
 
 		double a, b, c;
 
-		System.out.println("Coenficientes da equacao do segundo  grau");
+		System.out.println("Coeficientes da equacao do segundo  grau");
 		System.out.println("Informe o valor de a:");
 		a = scan.nextDouble();
 		if(a == 0){

@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Exer09 {
 
 	public static void main(String[] args) {
+	  // Programa realiza a leitura de 3 numeros. 
+	  // Em seguida, imprime os valores em ordem decrescente
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("Digite o primeiro numero:");
@@ -18,42 +20,43 @@ public class Exer09 {
 
 		/*
 		 * 
-		 * considerando três números hipotéticos: A, B, C possibilidades:
+		 * Considerando tres numeros hipoteticos: num01 (A), num02(B), num03(C) 
+		 * Possibilidades existentes:
 		 * 
-		 * A < B < C
+		 * num01 < num02 < num03 (A < B < c)
 		 * 
-		 * A < C < B
-		 * 
-		 * 
-		 * B < A < C
-		 * 
-		 * B < C < A
+		 * num01 < num03 < num02 (A < C < B)
 		 * 
 		 * 
-		 * C < A < B
+		 * num02 < num01 < num03 (B < A < C)
 		 * 
-		 * C < B < A
+		 * num02 < num03 < num01 (B < C < A)
+		 * 
+		 * 
+		 * num03 < num01 < num02 (C < A < B)
+		 * 
+		 * num03 < num02 < num01 (C < B < A)
 		 * 
 		 */
 		System.out.println("Ordem decrescente:");
 
 		if ((num01 <= num02 && num01 <= num03) && (num02 <= num03)) {
-			// situação: A < B < C
+			// situacao: num01 < num02 < num03
 			System.out.println(num03 + " - " + num02 + " - " + num01);
 		} else if ((num01 <= num03 && num01 <= num02) && (num03 <= num02)) {
-			// situação: A < C < B
+			// situacao: num01 < num03 < num02
 			System.out.println(num02 + " - " + num03 + " - " + num01);
 		} else if ((num02 <= num01 && num02 <= num03) && (num01 <= num03)) {
-			// situação: B < A < C
+			// situacao: num02 < num01 < num03
 			System.out.println(num03 + " - " + num01 + " - " + num02);
 		} else if ((num02 <= num03 && num02 <= num01) && (num03 <= num01)) {
-			// situação: B < C < A
+			// situacao: num02 < num03 < num01
 			System.out.println(num01 + " - " + num03 + " - " + num02);
 		} else if ((num03 <= num01 && num03 <= num02) && (num01 <= num02)) {
-			// situação: B < C < A
+			// situacao: num03 < num01 < num02
 			System.out.println(num02 + " - " + num01 + " - " + num03);
 		} else if ((num03 <= num02 && num03 <= num01) && (num02 <= num01)) {
-			// situação: C < B < A
+			// situacao: num03 < num02 < num01
 			System.out.println(num01 + " - " + num02 + " - " + num03);
 		}
 

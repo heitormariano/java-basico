@@ -3,8 +3,10 @@ package com.loiane.cursojava.aula15.labs;
 import java.util.Scanner;
 
 public class Exer11 {
-	public static void main(String[] args){
-		Scanner scan = new Scanner(System.in);
+	private static Scanner scan;
+
+  public static void main(String[] args){
+		scan = new Scanner(System.in);
 
 		System.out.println("Programa calculo de salario");
 		System.out.println("Informe o salario:");
