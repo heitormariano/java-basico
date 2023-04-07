@@ -27,7 +27,7 @@ public class Agenda {
 
 	public boolean removerContato(int indice) {
 		if (!isPosicaoValida(indice)) {
-			throw new IllegalArgumentException("indíce inválido");
+			throw new IllegalArgumentException("índice inválido");
 		}
 
 		for (int i = indice; i < this.tamanho - 1; i++) {
