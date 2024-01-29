@@ -44,9 +44,9 @@ public class JogoVelhaV2 {
 			coluna = sc.nextInt() - 1;
 
 			if (!isLinhaColunaValida(linha, coluna)) {
-				System.out.println("Linha e/ou coluna inv·lidos. Escolha valores entre 1 e 3");
+				System.out.println("Linha e/ou coluna inv√°lidos. Escolha valores entre 1 e 3");
 			} else if (isPosicaoOcupada(linha, coluna)) {
-				System.out.println("PosiÁ„o j· preenchida. Escolha outra");
+				System.out.println("Posi√ß√£o j√° preenchida. Escolha outra");
 			} else {
 				valido = true;
 			}
@@ -71,7 +71,7 @@ public class JogoVelhaV2 {
 	private static boolean verificarGanhador(char sinalMarcacao) {
 		boolean retorno = false;
 
-		// verificaÁ„o das linhas e colunas
+		// verifica√ß√£o das linhas e colunas
 		for (int i = 0; i < 3; i++) {
 			if (tabuleiro[i][0] == sinalMarcacao && tabuleiro[i][1] == sinalMarcacao
 					&& tabuleiro[i][2] == sinalMarcacao) {
@@ -83,7 +83,7 @@ public class JogoVelhaV2 {
 			}
 		}
 
-		// verificaÁ„o das diagonais
+		// verifica√ß√£o das diagonais
 		int i = 0;
 		if (tabuleiro[i][i] == sinalMarcacao && tabuleiro[i + 1][i + 1] == sinalMarcacao
 				&& tabuleiro[i + 2][i + 2] == sinalMarcacao) {
@@ -100,11 +100,11 @@ public class JogoVelhaV2 {
 		boolean linhaValida = false;
 		boolean colunaValida = false;
 
-		if (linha >= 0 && linha <= 3) {
+		if (linha >= 0 && linha <= 2) {
 			linhaValida = true;
 		}
 
-		if (coluna >= 0 && coluna <= 3) {
+		if (coluna >= 0 && coluna <= 2) {
 			colunaValida = true;
 		}
 
