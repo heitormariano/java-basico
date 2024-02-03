@@ -2,16 +2,16 @@ package com.loiane.cursojava.aula27.labs;
 
 import java.util.Scanner;
 
-// Poucas mudanças em relação à classe Exer06 (Jogo da Velha, aula 20)
+// Poucas mudancas relacao a classe Exer06 (Jogo da Velha, aula 20)
 public class JogoVelha {
-  private char[][] tabuleiro = new char[3][3]; // variável renomeda para tabuleiro
+  private char[][] tabuleiro = new char[3][3]; // variavel renomeda para tabuleiro
   private Scanner scan = new Scanner(System.in);
   private int linha, coluna;
   private boolean ganhou;
   private int jogada;
   private char sinal;
 
-  // renomeado o método para "iniciarJogo()"
+  // renomeado o metodo para "iniciarJogo()"
   public void iniciarJogo() {
     linha = 0;
     coluna = 0;
@@ -24,10 +24,10 @@ public class JogoVelha {
 
     while (!ganhou) {
       if (jogada % 2 == 1) {
-        System.out.println("Vez do Jogador 1. Escolha da posição da marcação.");
+        System.out.println("Vez do Jogador 1. Escolha da posicao da marcacao.");
         sinal = 'X';
       } else {
-        System.out.println("Vez do Jogador 2. Escolha da posição da marcação.");
+        System.out.println("Vez do Jogador 2. Escolha da posicao da marcacao.");
         sinal = 'O';
       }
 
@@ -36,7 +36,7 @@ public class JogoVelha {
 
       boolean posicaoLivre = hasPosicaoLivre();
       if (!posicaoLivre) {
-        System.out.println("Posição já usada, tente novamente.");
+        System.out.println("Posicao ja usada, tente novamente.");
       } else {
         tabuleiro[linha][coluna] = sinal;
         jogada++;
@@ -57,7 +57,7 @@ public class JogoVelha {
         linhaValida = true;
         linha--;
       } else {
-        System.out.println("Entrada inválida, tente novamente.");
+        System.out.println("Entrada invalida, tente novamente.");
       }
     }
   }
@@ -72,7 +72,7 @@ public class JogoVelha {
         colunaValida = true;
         coluna--;
       } else {
-        System.out.println("Entrada inválida, tente novamente.");
+        System.out.println("Entrada invalida, tente novamente.");
       }
     }
   }
@@ -95,7 +95,7 @@ public class JogoVelha {
     }
   }
 
-  // método recebe o "sinal" (marcação) do jogador
+  // metodo recebe o "sinal" (marcacao) do jogador
   public void verificarGanhador(char sinal) {
     if (tabuleiro[0][0] == sinal && tabuleiro[0][1] == sinal && tabuleiro[0][2] == sinal
         || tabuleiro[1][0] == sinal && tabuleiro[1][1] == sinal && tabuleiro[1][2] == sinal
@@ -116,7 +116,7 @@ public class JogoVelha {
 
     } else if (jogada > 9) {
       ganhou = true;
-      System.out.println("Ninguém ganhou");
+      System.out.println("Ninguï¿½m ganhou");
     }
   }
 }
