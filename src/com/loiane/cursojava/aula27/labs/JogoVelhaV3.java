@@ -3,7 +3,7 @@ package com.loiane.cursojava.aula27.labs;
 import java.util.Scanner;
 
 public class JogoVelhaV3 {
-	private char[][] tabuleiro = { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
+	private char[][] tabuleiro;
 	private Scanner scan;
 	private int linha;
 	private int coluna;
@@ -12,6 +12,7 @@ public class JogoVelhaV3 {
 	private char sinal;
 
 	public JogoVelhaV3() {
+		tabuleiro = new char[][] { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
 		scan = new Scanner(System.in);
 		qtdJogadas = 1;
 	}
@@ -35,7 +36,7 @@ public class JogoVelhaV3 {
 
 			informarLinha();
 			informarColuna();
-			verificarPosicaoLivre();
+			realizarMarcacao();
 
 			imprimirTabuleiro();
 			verificarGanhador();
@@ -86,7 +87,7 @@ public class JogoVelhaV3 {
 		}
 	}
 
-	public void verificarPosicaoLivre() {
+	public void realizarMarcacao() {
 		boolean posicaoLivre = hasPosicaoLivre();
 		if (!posicaoLivre) {
 			System.out.println("Posicao ja usada. Digite novamente.");
